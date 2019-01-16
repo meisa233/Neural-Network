@@ -26,7 +26,7 @@ if __name__ == '__main__':
     with open('./BG_2048.txt', 'a') as f:
         for i in TrueTrans:
             f.write(str(i[0])+'\t'+str(i[1])+'\n')
-```
+'''
 TRECVid标签示例[文件格式为.xml]
 <!DOCTYPE refSeg SYSTEM "shotBoundaryReferenceSegmentation.dtd">
 <refSeg src="BG_2408.mpg" creationMethod="MANUAL" totalFNum="35892">
@@ -52,4 +52,4 @@ RAIDataset标签示例[文件格式为.txt]
 105 600
 601 870
 ...
-```
+'''
