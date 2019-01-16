@@ -1,0 +1,14 @@
+net: "Siamese_hybridCNN_deploy_new.prototxt"
+test_iter: 168
+test_interval: 100
+base_lr: 0.0000001
+lr_policy: "step"
+gamma: 0.9
+stepsize: 500
+display: 100
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "./snapshots3/snapshot"
+solver_mode: GPU
