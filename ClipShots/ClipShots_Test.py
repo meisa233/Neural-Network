@@ -9,6 +9,7 @@ if __name__ == '__main__':
     Count = 0
     # 准备写入的文本文档地址
     TheFirst1000VideoNameTXTpath = 'D:\\ClipShots\\TheFirst2000.txt'
+    
     # 遍历所有标签（标签形式是【videoname.mp4:[2,3],[4,9]以及framenum:2000】其中videoname.mp4代表是影片的名字，后面代表的是切换，包含了软切换[4,9]
     # 和硬切换[2,3]，framenum是该影片的总帧数
     for videoname, labels in annotations.items():
