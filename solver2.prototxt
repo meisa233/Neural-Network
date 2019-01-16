@@ -1,0 +1,14 @@
+net: "Siamese_mnist_deploy_new.prototxt"
+test_iter: 3
+test_interval: 100
+base_lr: 0.00001
+lr_policy: "step"
+gamma: 0.0001
+stepsize: 100
+display: 100
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 50000
+snapshot_prefix: "./snapshots"
+solver_mode: GPU
