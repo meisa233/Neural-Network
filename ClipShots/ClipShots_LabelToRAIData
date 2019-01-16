@@ -1,0 +1,24 @@
+import os
+import json
+
+# The labels of ClipShots:
+# {"tWmfBwdAJzE.mp4": {"transitions": [[2776, 2789], [3473, 3488], [8665, 8676]], "frame_num": 8991.0}
+# It is a .json file.
+
+# The labels of RAIDataset:
+# 0 4
+# 5 9
+# 10 200
+# 204 900
+# ...
+# It is a .txt file.
+
+# Change the annotation of ClipShots to RAI
+if __name__ == '__main__':
+    os.chdir('D:\\ClipShots\\ClipShots\\ClipShots\\annotations')
+    annotations = json.load(open('./test.json'))
+    os.chdir('D:\\ClipShots\\ClipShots\\ClipShots\\converted_annotations_test')
+    for videonames, labels in annotations.items():
+        labelsnew = ['\t'.join([str(i[0]), str(i[1])+'\n']) for i in labels['transitions']]
+        with open('.'.join([str(videonames).split('.')[0]+'_gt','txt']), 'w') as f:
+                  f.writelines(labelsnew)
