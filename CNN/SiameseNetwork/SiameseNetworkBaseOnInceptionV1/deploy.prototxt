@@ -1,5 +1,6 @@
 name: "SiameseNetwork"
 
+
 layer {
   name: "data"
   type: "Input"
